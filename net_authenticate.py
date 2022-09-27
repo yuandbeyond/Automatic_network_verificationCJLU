@@ -53,7 +53,7 @@ def net_authenticate():
         print('正在验证...')
         requests.post(
             url='https://portal2.cjlu.edu.cn:801/eportal/?c=ACSetting&a=Login&wlanuserip={}&wlanacip=null&wlanacname=&port=&iTermType=1&mac=000000000000&ip={}&redirect=null=attention&jsonp=jsonp&callback=__jp5'.format(
-                ip, ip), headers=header, data=data)
+                ip, ip), headers=header, data=data, verify=False)
         print('登陆成功')
 
         return True
